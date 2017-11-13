@@ -1,0 +1,1 @@
+console.log('skeleton ok')

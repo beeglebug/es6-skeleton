@@ -14,10 +14,19 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: ['env'],
+            plugins: [
+              'transform-class-properties',
+              'transform-object-rest-spread'
+            ]
           }
         }
       }
     ]
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    publicPath: '/build'
   }
 }
