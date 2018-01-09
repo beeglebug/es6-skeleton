@@ -1,1 +1,3 @@
-document.getElementById('output').innerText = 'ok'
+import { test } from './Module'
+
+test()
