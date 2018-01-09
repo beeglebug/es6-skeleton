@@ -4,3 +4,9 @@ export default function confirm () {
   element.innerText = confirmation
   return confirmation
 }
+
+// proves that plugins are working
+export class Test {
+  static test (a) { return { ...a, foo: true } }
+  bound = () => true
+}

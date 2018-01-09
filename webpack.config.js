@@ -1,6 +1,6 @@
 const path = require('path')
-
 const outputDirectory = path.resolve(__dirname, 'dist')
+const nodeModulesDirectory = path.resolve(__dirname, 'node_modules');
 const baseUrl = '/'
 
 module.exports = {
@@ -14,21 +14,19 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env'],
-            plugins: [
-              'transform-class-properties',
-              'transform-object-rest-spread'
-            ]
-          }
+        exclude: nodeModulesDirectory,
+        loader: 'babel-loader',
+        options: {
+          presets: ['env'],
+          plugins: [
+            'transform-class-properties',
+            'transform-object-rest-spread'
+          ]
         }
       }
     ]
   },
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: outputDirectory
   }
