@@ -1,3 +1,3 @@
-import { test } from './Module'
+import confirm from './confirm'
 
-test()
+console.log(confirm())
