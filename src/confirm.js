@@ -1,12 +1,6 @@
-export default function confirm () {
+export default function confirm (provider) {
   const element = document.getElementById('output')
-  const confirmation = 'ok'
-  element.innerText = confirmation
-  return confirmation
-}
-
-// proves that plugins are working
-export class Test {
-  static test (a) { return { ...a, foo: true } }
-  bound = () => true
+  const message = provider.message
+  element.innerText = message
+  return message
 }
