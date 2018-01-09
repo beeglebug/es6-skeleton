@@ -1,1 +1,1 @@
-console.log('skeleton ok')
+document.getElementById('output').innerText = 'ok'

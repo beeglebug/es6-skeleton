@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "serve": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "lint": "eslint src"
   },
   "devDependencies": {
